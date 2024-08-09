@@ -1,0 +1,19 @@
+<div class="resources-container">
+  <mat-card *ngFor="let book of books" [@cardAnimation] class="zoom-card">
+    <mat-card-header>
+      <mat-card-title (click)="toggleDropdown(book)">
+        {{ book.title }}
+        <mat-icon *ngIf="isDropdownOpen(book)">arrow_drop_down</mat-icon>
+        <mat-icon *ngIf="!isDropdownOpen(book)">arrow_right</mat-icon>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ book.description }}</p>
+    </mat-card-content>
+    <mat-card-actions *ngIf="isDropdownOpen(book)">
+      <a mat-button class="dropdown-link" [href]="book.pdfLink" target="_blank">Download PDF</a>
+      <a mat-button class="dropdown-link" [href]="book.driveLink" target="_blank">Google Drive</a>
+    </mat-card-actions>
+  </mat-card>
+</div>
+

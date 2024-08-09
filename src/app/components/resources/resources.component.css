@@ -1,0 +1,53 @@
+mat-card {
+  margin: 16px 0;
+}
+.resources-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adjust spacing between cards */
+}
+
+mat-card {
+  position: relative;
+}
+
+mat-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Adjust spacing between links */
+}
+
+.dropdown-link {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-link:hover {
+  transform: scale(1.1); /* Zoom-in effect */
+  color: #ff5722; /* Optional: Change color on hover */
+}
+
+mat-card-title {
+  cursor: pointer;
+}
+
+mat-icon {
+  vertical-align: middle;
+  margin-left: 8px; /* Adjust spacing between title and icon */
+}
+.resources-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adjust spacing between cards */
+  overflow: hidden; /* Prevents overflow of child elements */
+  padding: 10px; /* Optional: Add padding to the container */
+}
+
+.zoom-card {
+  transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better visual effect */
+}
+
+.zoom-card:hover {
+  transform: scale(1.05); /* Slightly zoom in on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
